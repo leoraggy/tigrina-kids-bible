@@ -29,7 +29,7 @@ export default function ImageCarousel({ currentIndex, onClose }) {
         });
         // Show the FlatList after scrolling
         setIsVisible(true);
-      }, 50);
+      }, 100);
     }
   }, [currentIndex]);
 
