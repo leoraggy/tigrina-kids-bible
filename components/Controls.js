@@ -57,10 +57,10 @@ export default function Controls({
         returnKeyType="done" // Makes the keyboard show "Done"
       />
       <TouchableOpacity style={styles.button} onPress={openOldChapters}>
-        <Text style={styles.buttonText}>Old Testament</Text>
+        <Text style={styles.buttonText}>ብሉይ ኪዳን</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={openNewChapters}>
-        <Text style={styles.buttonText}>New Testament</Text>
+        <Text style={styles.buttonText}>ሓድሽ ኪዳን </Text>
       </TouchableOpacity>
     </View>
   );
