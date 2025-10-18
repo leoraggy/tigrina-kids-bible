@@ -60,7 +60,7 @@ export default function Controls({
         <Text style={styles.buttonText}>ብሉይ ኪዳን</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={openNewChapters}>
-        <Text style={styles.buttonText}>ሓድሽ ኪዳን </Text>
+        <Text style={styles.buttonText}>ሓድሽ ኪዳን</Text>
       </TouchableOpacity>
     </View>
   );
