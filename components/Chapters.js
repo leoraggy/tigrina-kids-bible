@@ -6,7 +6,7 @@ import {
   SectionList,
   TouchableOpacity,
 } from "react-native";
-import { chunkArray } from "../data";
+import { chunkArray } from "../utils/data";
 
 export default function Chapters({
   handlePage,

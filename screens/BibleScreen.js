@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
-import { oldTestamentChapters, newTestamentChapters } from "../data";
+import { oldTestamentChapters, newTestamentChapters } from "../utils/data";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import BiblePDF from "../components/BiblePDF";
 import Chapters from "../components/Chapters";
@@ -91,8 +91,8 @@ export default function BibleScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   toggleTouchableOpacity: {
-    position: "absolute",
-    left: 10,
+    marginTop: "12%",
+    marginLeft: "5%",
     width: 40,
     height: 40,
     backgroundColor: "white",
