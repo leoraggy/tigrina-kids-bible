@@ -17,13 +17,18 @@ export default function ImagesScreen() {
 
   const openImageViewer = (index) => {
     setCurrentIndex(index);
-    setVisible(true);
   };
+
+  useEffect(() => {
+    if (currentIndex !== null) {
+      setVisible(true);
+    }
+  }, [currentIndex]);
 
   const closeModal = () => {
     setVisible(false);
+    setCurrentIndex(null);
   };
-
   function renderItem({ item, index }) {
     return (
       <View style={styles.imageContainer}>
