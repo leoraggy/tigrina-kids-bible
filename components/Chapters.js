@@ -39,7 +39,7 @@ export default function Chapters({
   }
 
   return (
-    <View style={{ paddingTop: "15%" }}>
+    <View>
       <SectionList
         sections={chapters.map((section) => ({
           ...section,

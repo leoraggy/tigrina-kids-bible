@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Modal,
 } from "react-native";
-import { useState, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { images } from "../utils/sortedImages";
 import ImageCarousel from "../components/ImageCarousel";
 
@@ -29,6 +29,7 @@ export default function ImagesScreen() {
     setVisible(false);
     setCurrentIndex(null);
   };
+
   function renderItem({ item, index }) {
     return (
       <View style={styles.imageContainer}>
