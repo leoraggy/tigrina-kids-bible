@@ -45,7 +45,7 @@ export default function ImageCarousel({ currentIndex, onClose }) {
   return (
     <View style={styles.container}>
       <FlatList
-        data={images}
+        data={displayImages}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         horizontal

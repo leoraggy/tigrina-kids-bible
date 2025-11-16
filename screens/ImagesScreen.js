@@ -51,7 +51,7 @@ export default function ImagesScreen() {
   return (
     <View style={styles.container}>
       <FlatList
-        data={images}
+        data={displayImages}
         renderItem={renderItem}
         keyExtractor={(item, index) => item.id.toString()}
         numColumns={3}
