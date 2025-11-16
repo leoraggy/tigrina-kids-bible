@@ -7,27 +7,35 @@ import {
   TouchableOpacity,
   Modal,
 } from "react-native";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { images } from "../utils/sortedImages";
 import ImageCarousel from "../components/ImageCarousel";
+import { Platform } from "react-native";
 
 export default function ImagesScreen() {
   const [visible, setVisible] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  let displayImages = [];
+
+  function removeViolentImages(array, targetIds) {
+    return array.filter((arr) => !targetIds.includes(arr.id));
+  }
+
+  if (Platform.OS === "android") {
+    displayImages = removeViolentImages(images, violentIds);
+  } else {
+    displayImages = images;
+  }
 
   const openImageViewer = (index) => {
     setCurrentIndex(index);
+    setVisible(true);
   };
-
-  useEffect(() => {
-    if (currentIndex !== null) {
-      setVisible(true);
-    }
-  }, [currentIndex]);
 
   const closeModal = () => {
     setVisible(false);
-    setCurrentIndex(null);
+    setTimeout(() => setCurrentIndex(null), 300);
   };
 
   function renderItem({ item, index }) {
@@ -49,9 +57,11 @@ export default function ImagesScreen() {
         numColumns={3}
       />
 
-      <Modal visible={visible} transparent={true} onRequestClose={closeModal}>
-        <ImageCarousel currentIndex={currentIndex} onClose={closeModal} />
-      </Modal>
+      {currentIndex !== null && (
+        <Modal visible={visible} transparent={true} onRequestClose={closeModal}>
+          <ImageCarousel currentIndex={currentIndex} onClose={closeModal} />
+        </Modal>
+      )}
     </View>
   );
 }

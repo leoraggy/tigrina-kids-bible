@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { chunkArray } from "../utils/data";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function Chapters({
   handlePage,
@@ -14,6 +15,7 @@ export default function Chapters({
   handleNewVisible,
   chapters,
 }) {
+  const insets = useSafeAreaInsets();
   function renderItem({ item, section }) {
     return (
       <View style={styles.row}>
@@ -50,6 +52,7 @@ export default function Chapters({
         renderSectionHeader={({ section: { title } }) => (
           <Text style={styles.header}>{title}</Text>
         )}
+        contentContainerStyle={{ paddingBottom: insets.bottom + 80 }}
       />
     </View>
   );

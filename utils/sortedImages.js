@@ -1,3 +1,8 @@
+export const violentIds = [
+  49, 65, 126, 127, 129, 356, 357, 358, 361, 371, 372, 369, 366, 365, 370, 368,
+  367, 364, 363, 299,
+];
+
 export const images = [
   { id: 0, image: require("../assets/sorted_images/image_001.jpg") },
   { id: 1, image: require("../assets/sorted_images/image_002.jpg") },
