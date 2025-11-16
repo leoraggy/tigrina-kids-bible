@@ -8,7 +8,7 @@ import {
   Modal,
 } from "react-native";
 import { useState } from "react";
-import { images } from "../utils/sortedImages";
+import { images, violentIds } from "../utils/sortedImages";
 import ImageCarousel from "../components/ImageCarousel";
 import { Platform } from "react-native";
 

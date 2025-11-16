@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import { images } from "../utils/sortedImages";
+import { images, violentIds } from "../utils/sortedImages";
 import { Platform } from "react-native";
 const { width: screenWidth } = Dimensions.get("window");
 
