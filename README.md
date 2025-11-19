@@ -1,7 +1,7 @@
 # How to run build:
 
 ```
-$ npm install -g eas-cli
+npm install -g eas-cli
 ```
 
 ```
